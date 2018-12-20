@@ -91,22 +91,23 @@
             android:id="@+id/sun_rising"
             android:background="@drawable/ic_sun_rising"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/place_autocomplete_separator_start"
-            />
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50pt"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sunRisingTime"
-            android:layout_marginStart="@dimen/place_autocomplete_separator_start"
-            />
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50pt"/>
 
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:id="@+id/sun_set"
-            android:layout_marginLeft="225dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="50pt"
             android:layout_centerVertical="true"
             android:background="@drawable/ic_sun_set"/>
 
@@ -115,7 +116,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/sunSetTime"
-            android:layout_marginLeft="225dp"/>
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="50pt"/>
 
     </RelativeLayout>
 
@@ -135,8 +137,9 @@
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:id="@+id/previousDate"
-            android:layout_marginStart="@dimen/place_autocomplete_separator_start"
             android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50pt"
             android:background="@drawable/ic_previous_date"/>
 
         <TextView
@@ -162,8 +165,19 @@
             android:id="@+id/nextDate"
             android:layout_centerVertical="true"
             android:background="@drawable/ic_next_date"
-            android:layout_toRightOf="@id/presentDate"
-            android:layout_marginLeft="@dimen/place_autocomplete_powered_by_google_height"/>
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50pt"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addNotification"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_add_notification"/>
+
     </RelativeLayout>
+
 
     </RelativeLayout>

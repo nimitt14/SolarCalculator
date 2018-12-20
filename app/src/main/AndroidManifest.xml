@@ -39,6 +39,8 @@
         </activity>
         <activity android:name=".MapActivity" />
         <activity android:name=".ListActivity" />
+        <receiver android:name=".NotificationPublisher" />
+
     </application>
 
 </manifest>

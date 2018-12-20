@@ -34,7 +34,6 @@ public class SolarEventCalculator{
     public Calendar computeSunsetCalendar(Zenith solarZenith, Calendar date) {
         return getLocalTimeAsCalendar(computeSolarEventTime(solarZenith, date, false), date);
     }
-
     private BigDecimal computeSolarEventTime(Zenith solarZenith, Calendar date, boolean isSunrise) {
         date.setTimeZone(this.timeZone);
         BigDecimal longitudeHour = getLongitudeHour(date, isSunrise);
@@ -131,6 +130,10 @@ public class SolarEventCalculator{
         return setScale(sinOfDeclination);
     }
 
+    private BigDecimal getCosineOfLatitude(BigDecimal latitude) {
+        BigDecimal cosineOfLatitude = BigDecimal.valueOf(Math.cos(convertDegreesToRadians(latitude).doubleValue()));
+        return setScale(cosineOfLatitude);
+    }
     private BigDecimal getCosineOfSunDeclination(BigDecimal sinSunDeclination) {
         BigDecimal arcSinOfSinDeclination = BigDecimal.valueOf(Math.asin(sinSunDeclination.doubleValue()));
         BigDecimal cosDeclination = BigDecimal.valueOf(Math.cos(arcSinOfSinDeclination.doubleValue()));

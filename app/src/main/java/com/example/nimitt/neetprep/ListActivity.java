@@ -27,14 +27,11 @@ public class ListActivity extends Activity {
         peopleList = new ArrayList<String>();
 
         peopleList=getIntent().getExtras().getStringArrayList("key");
-
-        //peopleList=(ArrayList<String>)getIntent().getSerializableExtra("key");
-        ArrayAdapter<String> arrayAdapter =
+          ArrayAdapter<String> arrayAdapter =
                 new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, peopleList);
         lv.setAdapter(arrayAdapter);
 
-
-        // register onClickListener to handle click events on each item
+// register onClickListener to handle click events on each item
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             // argument position gives the index of item which is clicked
